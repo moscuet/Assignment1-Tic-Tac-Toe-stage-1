@@ -61,7 +61,7 @@ function checkResult(result) {
   if (result) {
     setTimeout(function () {
       alert(`Player ${activePlayer} won!!`);
-    }, 100);
+    }, 1000);
   }
 }
 const clickhandle = (id) => {
