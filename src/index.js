@@ -59,6 +59,13 @@ function updateScore() {
   if (checkDigonal()) return true;
   return false;
 }
+function checkResult(result) {
+  if (result) {
+    setTimeout(function () {
+      alert(`Player ${activePlayer} won!!`);
+    }, 1000);
+  }
+}
 const clickhandle = (id) => {
   if (activePlayer) {
     document
@@ -71,11 +78,7 @@ const clickhandle = (id) => {
       else if (activePlayer === "2") text = "o";
       cell.innerHTML = text;
       let result = updateScore(activePlayer);
-      if (result) {
-        res.innerHTML = `Player ${activePlayer} won!!`;
-        alert(`Player ${activePlayer} won!!`);
-        reSet();
-      }
+      checkResult(result);
       activePlayer = activePlayer === "1" ? "2" : "1";
     }
     document
