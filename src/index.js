@@ -1,3 +1,4 @@
+let n = 5;
 let activePlayer = "1";
 document
   .getElementById(activePlayer)
@@ -7,7 +8,7 @@ const res = document.getElementById("result");
 
 function reSet() {
   board.innerHTML = "";
-  generateTable(5);
+  generateTable(n);
 }
 function checkRowColm(p) {
   const score = activePlayer === "1" ? "x" : activePlayer === "2" ? "o" : "";
@@ -110,4 +111,4 @@ function generateTable(n) {
   table.setAttribute("border", "2px");
 }
 
-generateTable(5);
+generateTable(n);
