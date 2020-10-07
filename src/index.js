@@ -7,7 +7,7 @@ const res = document.getElementById("result");
 
 function reSet() {
   board.innerHTML = "";
-  generateTable(n);
+  generateTable(5);
 }
 function checkRowColm(p) {
   const score = activePlayer === "1" ? "x" : activePlayer === "2" ? "o" : "";
