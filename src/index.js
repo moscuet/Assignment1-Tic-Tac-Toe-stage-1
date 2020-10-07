@@ -4,8 +4,6 @@ document
   .getElementById(activePlayer)
   .setAttribute("style", "background-color: green;");
 const board = document.getElementById("board");
-const res = document.getElementById("result");
-
 function reSet() {
   board.innerHTML = "";
   generateTable(n);
@@ -63,7 +61,7 @@ function checkResult(result) {
   if (result) {
     setTimeout(function () {
       alert(`Player ${activePlayer} won!!`);
-    }, 1000);
+    }, 100);
   }
 }
 const clickhandle = (id) => {
